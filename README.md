@@ -24,6 +24,15 @@ This automation:
 
 ---
 
+# B2B AI Outreach Automation using n8n, Gemini AI, Gmail, and Google Sheets
+
+Automates personalized B2B outreach emails using n8n, Gemini AI, Gmail, and Google Sheets.  
+It reads leads from Google Sheets, generates AI-crafted cold emails, sends them via Gmail, and updates all data automatically.
+
+![Workflow Overview](./Workflow.JPG)
+
+---
+
 ## Workflow Components
 
 | Step | Node | Description |
