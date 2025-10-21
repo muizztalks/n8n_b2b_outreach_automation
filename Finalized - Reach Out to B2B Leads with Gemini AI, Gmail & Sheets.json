@@ -1,0 +1,3029 @@
+{
+  "name": "Finalized - Reach Out to B2B Leads with Gemini AI, Gmail & Sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Subject Line Sent": "={{ $('Basic LLM Chain').item.json.text.match(/SUBJECT:\\s*(.+)/)?.[1]?.trim() || \"\" }}",
+            "Failure on llm model": "NO",
+            "Email Status": "SENT",
+            "Time: ": "={{ $now.setZone('Asia/Karachi').format('yyyy-MM-dd HH:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "da7ad0ef-87ae-4da0-bee0-d464c7e33d3c",
+      "name": "Update row in sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        3392,
+        768
+      ],
+      "typeVersion": 4.6,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2576,
+        800
+      ],
+      "id": "80ab3b5c-d31d-4915-a994-140d335c6331",
+      "name": "Loop Over Items",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Loop Over Items').item.json['Email (n8n)'] }}",
+        "subject": "={{ $json.text.match(/SUBJECT: (.+)/)?.[1]?.trim() }}",
+        "message": "={{ \n  '<p>' + \n  $('Basic LLM Chain').item.json.text\n    .split('MESSAGE:')[1]\n    ?.split('PERSONALIZATION:')[0]\n    ?.trim()\n    .replace(/\\n\\n/g, '</p><p>')  // Note: single backslash, not double\n    .replace(/\\n/g, '<br>')  // Handle single line breaks too\n  + '</p>'\n}}\n\n<br><br>\n<img src=\"https://drive.google.com/uc?export=view&id=1BidN_ZBvD3u5xzO6yDInb6_-9ihdGBzj\" alt=\"Brochure 1\" style=\"width:100%;max-width:600px;\">\n<br><br>\n<img src=\"https://drive.google.com/uc?export=view&id=1zTp1hG0PQaXYHejWv8rb0Yd-X8WrdUcK\" alt=\"Brochure 2\" style=\"width:100%;max-width:600px;\">",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3184,
+        848
+      ],
+      "id": "143e5fe2-3ccd-4675-b51d-cd60245460e4",
+      "name": "Send a message",
+      "webhookId": "9737b469-82f3-4476-b8f2-5fa6d9d556de",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Mnoln6XSbA4aPBJ0",
+          "name": "Gmail account 10"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1895c810-95bb-45eb-9c2e-b9ca18263ed1",
+              "leftValue": "={{ $json.error.code }}",
+              "rightValue": "=ENOTFOUND",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2112,
+        1056
+      ],
+      "id": "c7014bc2-d616-4303-a286-8d1265640ddf",
+      "name": "Website Found?"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert B2B cold email copywriter.\n\n## INPUT DATA\nContact Information:\n- Name: {{ $('Loop Over Items').item.json['Name (n8n)'] }}\n- Title: {{ $('Loop Over Items').item.json['Title (n8n)'] }}\n- Company: {{ $('Loop Over Items').item.json['Company Name (n8n)'] }}\n- Email: {{ $('Loop Over Items').item.json['Email (n8n)'] }}\n- Website: {{ $('Loop Over Items').item.json['Web Address (n8n)'] }}\n\nWebsite Content:\n{{ $('Getting Website data').first().json.body || 'No website content available' }}\n\n## CRITICAL FORMATTING RULES (READ CAREFULLY)\n1. NEVER EVER use em dashes (—) or en dashes (–) anywhere in the email\n2. Use: commas(,), periods/full stops(.), semicolons(;), or start new sentences\n3. Example: DON'T write \"quality—no doubt\" → DO write \"quality, no doubt\" or \"quality. No doubt\"\n4. Example: DON'T write \"tools—saving you time\" → DO write \"tools that save you time\"\n5. NO bold, italics, or HTML formatting\n6. NO equal signs (=) before text\n7. Use ACTUAL line breaks between paragraphs (press Enter twice)\n8. Use bullet points (•) for the 3 benefits ONLY\n9. Always include full signature block with all social links and phone numbers\n\n## YOUR TASK\nCreate a conversational, research-backed cold email that feels personal and valuable.\n\nStructure:\n1. Use first name only in greeting (not full name)\n2. Open with a specific observation about their company/website\n3. Identify a relevant challenge or opportunity for their role\n4. Introduce Splendid Mark naturally\n5. Use 3 bullet points to show concrete value for THEIR business\n6. MANDATORY: Include this exact line after bullets: \"Alongside automations we also offer services which are enlisted in our brochures below.\"\n7. End with a low-pressure call-to-action\n8. Keep it under 200 words\n\n## OUTPUT FORMAT\nRespond with ONLY these fields (IMPORTANT: Use actual line breaks, not \\n):\n\nTO: [email address]\n\nSUBJECT: [Short, curiosity-driven subject - 5-8 words, no salesy words]\n\nSEND: [YES or NO]\n\nMESSAGE:\nHi [First Name],\n\n[One specific observation about their company/role from website. Use commas or periods, NOT dashes.]\n\n[One sentence identifying a relevant challenge or opportunity for them. Use commas or periods, NOT dashes.]\n\nAt Splendid Mark, we help [industry] businesses like [Company Name] streamline operations and grow through AI and automation. This could mean:\n\n• [Specific automation benefit 1 for their role]\n• [Specific efficiency gain 2]\n• [Specific growth opportunity 3]\n\nIMPORTANT: You MUST include this exact sentence after the bullet points:\n\"Alongside automations we also offer services which are enlisted in our brochures below.\"\n\n[One sentence about the tangible impact/outcome. Use commas or periods, NOT dashes.]\n\nWorth a 15-minute chat? https://calendly.com/farzok-malik/virtual-meeting\n\nBest regards,\nMaryam Mohiyuddin\nSplendid Mark\n\nWhatsApp or Call: +92 314 4111223 / +92 333 4111223\nEmail: info@splendidmark.com\nWebsite: https://splendidmark.com/\nLinkedIn: https://www.linkedin.com/company/splendid-mark\nInstagram: https://www.instagram.com/splendidmark_\nFacebook: https://www.facebook.com/Splendidmark/\n\nPERSONALIZATION:\n- [Insight 1]\n- [Insight 2]\n\n## SUBJECT LINE REQUIREMENTS:\n- Must create immediate curiosity or pattern interrupt (something unexpected)\n- Should make the recipient think \"wait, how would this apply to us?\"\n- Avoid questions, generic pleasantries, or anything that sounds like cold outreach\n- Make them WANT to open it, not feel like they should\n- 5-8 words maximum\n- NO mention of services, let the brochure do that\n\n## FINAL CHECK BEFORE SENDING YOUR RESPONSE:\n- Read through your entire email\n- Find ANY instance of — or – \n- Replace with comma, period, or rewrite the sentence\n- Keep under 200 words total\n- Be conversational, not corporate\n- Use first name only, not full name\n- If no email: SEND: NO\n- Ensure proper spacing with blank line between each paragraph",
+        "hasOutputParser": true,
+        "needsFallback": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        2592,
+        1040
+      ],
+      "id": "dddea55a-8318-4d22-9fe5-4bac01bdfa37",
+      "name": "Basic LLM Chain",
+      "alwaysOutputData": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "36d3e1e3-9349-4f4c-bcf1-a66088e5c171",
+              "leftValue": "={{$json.text.match(/SEND:\\s*(.+)/i)?.[1]?.trim().toUpperCase()}}",
+              "rightValue": "YES",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2960,
+        976
+      ],
+      "id": "a546613b-dc1c-4b9d-85d0-65febb6db235",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Email Status": "FAILED (Invalid Email)",
+            "Failure on llm model": "NO",
+            "Time: ": "={{ $now.setZone('Asia/Karachi').format('yyyy-MM-dd HH:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3248,
+        1024
+      ],
+      "id": "85e3968f-daf5-4377-acd4-387cf487035b",
+      "name": "Update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "==You are Farzok Malik, from Splendid Mark, responding to a potential client's email reply.\n\n## ORIGINAL OUTREACH CONTEXT\nWe initially contacted: {{ $('find lead in sheets').item.json['Name (n8n)'] || 'Unknown' }}\nTheir Title: {{ $('find lead in sheets').item.json['Title (n8n)'] || 'Not specified' }}\nTheir Company: {{ $('find lead in sheets').item.json['Company Name (n8n)'] || 'Not specified' }}\nIndustry: {{ $('find lead in sheets').item.json['Industry (n8n)'] || 'General' }}\nOriginal Subject Line: {{ $('find lead in sheets').item.json['Subject Line Sent'] || 'AI & Automation Services' }}\nDate We Sent: {{ $('find lead in sheets').item.json['Date Sent'] || 'Recently' }}\n\n## THEIR REPLY\nSubject: {{ $('Code').item.json.originalSubject }}\nFrom: {{ $('Code').item.json.senderName }}\nMessage:\n{{ $('Code').item.json.replyBody }}\n\n## YOUR TASK\nWrite a professional, warm response that:\n\n1. **Acknowledges their reply** - Reference something specific they mentioned\n2. **Answers their questions** - If they asked anything, answer clearly and concisely\n3. **Provides value** - Share a relevant insight or case study if appropriate\n4. **Next steps** - Suggest a specific action:\n   - If interested: Schedule a call (use Calendly link)\n   - If asking questions: Offer to send more information\n   - If hesitant: Offer a low-pressure resource or follow-up\n\n5. **Maintain conversation** - Keep it conversational, not salesy\n6. **Professional tone** - Friendly but business-appropriate\n\n## OUTPUT FORMAT\nWrite ONLY the email body content. Do NOT include:\n- Subject line (we'll use Re: original subject)\n- \"From:\" or \"To:\" fields\n- Greetings like \"Dear\" (start with \"Hi [First Name]\")\n\nStart with \"Hi [First Name],\" and end with the signature below.\n\nUse proper paragraph spacing with blank lines between paragraphs.\n\n## SIGNATURE (Always include exactly as shown)\n\nBest regards,\nFarzok Malik\nSplendid Mark\n\nWebsite: https://splendidmark.com/\nInstagram: https://www.instagram.com/splendidmark_\nFacebook: https://www.facebook.com/Splendidmark/\nLinkedIn: https://www.linkedin.com/company/splendid-mark\nCall: +92 314 4111223 / +92 333 4111223\n\n## IMPORTANT RULES\n- Extract first name from the Name field (text before any space)\n- Keep response under 250 words\n- Match their tone (formal if they're formal, casual if they're casual)\n- If they're clearly not interested, thank them politely and leave door open\n- NO bullet points unless listing specific items they asked about\n- Use actual line breaks between paragraphs (press Enter twice)",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        1152,
+        1504
+      ],
+      "id": "c5a64a2b-d534-4c47-b6c2-f128883a8f53",
+      "name": "Basic LLM Chain1",
+      "executeOnce": true,
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the input data\nconst input = $input.item.json;\n\n// Extract sender email - handle different formats\nlet senderEmail = '';\nif (input.from) {\n  const emailMatch = input.from.match(/<(.+?)>/);\n  senderEmail = emailMatch ? emailMatch[1] : input.from;\n}\nsenderEmail = senderEmail.toLowerCase().trim();\n\n// Extract sender name\nlet senderName = '';\nif (input.from) {\n  const nameMatch = input.from.match(/^(.+?)\\s*</);\n  senderName = nameMatch ? nameMatch[1].replace(/['\"]/g, '').trim() : senderEmail.split('@')[0];\n}\n\n// Get message body - try different fields\nconst bodyPlain = input.textPlain || input.text || input.bodyPlainText || '';\nconst bodyHtml = input.html || input.bodyHtml || '';\n\n// Get subject and clean it\nconst rawSubject = input.subject || '';\nconst cleanSubject = rawSubject.replace(/^(Re:|Fwd:)\\s*/gi, '').trim();\n\n// Get message IDs for threading\nconst messageId = input['message-id'] || input.messageId || '';\nconst inReplyTo = input['in-reply-to'] || input.inReplyTo || '';\nconst references = input.references || '';\n\n// Log for debugging\nconsole.log('Extracted Email:', senderEmail);\nconsole.log('Extracted Name:', senderName);\nconsole.log('Body Length:', bodyPlain.length);\n\nreturn {\n  json: {\n    senderEmail: senderEmail,\n    senderName: senderName,\n    replyBody: bodyPlain,\n    replyBodyHtml: bodyHtml,\n    subject: cleanSubject,\n    originalSubject: rawSubject,\n    messageId: messageId,\n    inReplyTo: inReplyTo,\n    references: references,\n    receivedDate: new Date().toISOString()\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        704,
+        1504
+      ],
+      "id": "58256204-6914-4ed5-8f23-a1749c78299c",
+      "name": "Code",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Email (n8n)",
+              "lookupValue": "={{ $json.senderEmail }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        928,
+        1504
+      ],
+      "id": "a6b3d416-a2da-4a03-a5df-b5f76a61c54e",
+      "name": "find lead in sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      },
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Code').item.json.senderEmail }}",
+        "subject": "=Re: {{ $('Code').item.json.subject }}",
+        "message": "=={{ \n  $('Basic LLM Chain1').item.json.text\n    .split('\\n\\n')\n    .map(para => '<p style=\"margin: 0 0 1em 0;\">' + para.replace(/\\n/g, '<br>') + '</p>')\n    .join('')\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1504,
+        1504
+      ],
+      "id": "50d27cd9-46ed-46df-8b73-0ca78f6bd646",
+      "name": "Send a message1",
+      "webhookId": "b56486b8-a8a7-4679-8658-dc2a06f72c0e",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Mnoln6XSbA4aPBJ0",
+          "name": "Gmail account 10"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email (n8n)": "=",
+            "Reply Received?": "Yes",
+            "Reply Date:": "={{ $now.format('yyyy-MM-dd HH:mm') }}",
+            "Reply Status:": "Responded",
+            "row_number": "={{ $('find lead in sheets').item.json.row_number }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date Sent",
+              "displayName": "Date Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1728,
+        1504
+      ],
+      "id": "e9c58800-e9f7-4c0e-8ee1-9bc6d2ab1d2c",
+      "name": "Update row in sheet4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "This workflow is for email replying agent. It is closed for now. \n",
+        "height": 256,
+        "width": 1392,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        592,
+        1456
+      ],
+      "typeVersion": 1,
+      "id": "e8696a54-31c1-449d-aebc-7aba8287ed33",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "sendTo": "outreach.splendidmark@gmail.com",
+        "subject": "Error Found in the llm node in n8n",
+        "message": "Kindly check the n8n workflow for the error",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3008,
+        1232
+      ],
+      "id": "3c9b57b0-cce2-45a9-9184-bd675e2d45ca",
+      "name": "Send a message2",
+      "webhookId": "0f954281-40a3-4df0-a740-4df834ba2565",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Mnoln6XSbA4aPBJ0",
+          "name": "Gmail account 10"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Failure on llm model": "YES",
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Email Status": "FAILED",
+            "Time: ": "={{ $now.setZone('Asia/Karachi').format('yyyy-MM-dd HH:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3248,
+        1232
+      ],
+      "id": "072a3055-20a8-427e-8b54-f6d58f20230a",
+      "name": "Update row in sheet5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e241fe29-b7ed-475e-b984-15ea5c52f2eb",
+              "leftValue": "={{$json.Answer > 0}}",
+              "rightValue": null,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "d892f1e5-d6a4-4dc3-9d96-112ee10e963e",
+              "leftValue": "={{ $json.Answer?.length > 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1168,
+        864
+      ],
+      "id": "7e9541f8-8066-4146-8292-7552a1cd3db9",
+      "name": "Has MX Record?",
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2112,
+        800
+      ],
+      "id": "b8b5af8e-5b26-42f8-8350-22dcc1993531",
+      "name": "Get All Row(s) in sheet",
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d32a50a4-2dee-4164-9685-c02c83d081f8",
+              "leftValue": "={{ $json['Email Status'] }}",
+              "rightValue": "empty",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        2336,
+        800
+      ],
+      "id": "bacfe832-7c4e-4efb-b523-3bf97cafd3df",
+      "name": "Filtering the unsent emails"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Valid Web Address?": "Invalid",
+            "Email Status": "FAILED",
+            "Time: ": "={{ $now.setZone('Asia/Karachi').format('yyyy-MM-dd HH:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2336,
+        1184
+      ],
+      "id": "9fa68838-f142-4538-966c-dc97e8a3b505",
+      "name": "Website Not found",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Valid Web Address?": "Valid"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2336,
+        1024
+      ],
+      "id": "5bbd2e8f-714b-41f7-a8e0-830f3e517aff",
+      "name": "Website Found",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json['Web Address (n8n)'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1920,
+        1056
+      ],
+      "id": "09e54051-c599-4cb6-ae13-58b3579b4837",
+      "name": "Getting Website data",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Has MX Record?": "YES"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date Sent",
+              "displayName": "Date Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1392,
+        768
+      ],
+      "id": "9d1da8cf-a109-4291-82f7-9ba3bc50cb79",
+      "name": "Has MX Record",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": "={{ $('Loop Over Items').item.json.row_number }}",
+            "Failure on llm model": "NULL",
+            "Has MX Record?": "NOT FOUND",
+            "Email Status": "NULL",
+            "Email Bounced Back?": "NULL",
+            "Reply Received?": "NULL",
+            "Reply Date:": "NULL",
+            "Reply Status:": "NULL",
+            "Subject Line Sent": "NULL",
+            "Time: ": "={{ $now.setZone('Asia/Karachi').format('yyyy-MM-dd HH:mm:ss') }}\n"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name (n8n)",
+              "displayName": "Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title (n8n)",
+              "displayName": "Title (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name (n8n)",
+              "displayName": "Company Name (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Web Address (n8n)",
+              "displayName": "Web Address (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valid Web Address?",
+              "displayName": "Valid Web Address?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Failure on llm model",
+              "displayName": "Failure on llm model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email (n8n)",
+              "displayName": "Email (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Has MX Record?",
+              "displayName": "Has MX Record?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Status",
+              "displayName": "Email Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time: ",
+              "displayName": "Time: ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject Line Sent",
+              "displayName": "Subject Line Sent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Bounced Back?",
+              "displayName": "Email Bounced Back?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Industry (n8n)",
+              "displayName": "Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sub Industry (n8n)",
+              "displayName": "Sub Industry (n8n)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Received?",
+              "displayName": "Reply Received?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Date:",
+              "displayName": "Reply Date:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Status:",
+              "displayName": "Reply Status:",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1392,
+        960
+      ],
+      "id": "7759f7a6-c47f-46e7-8470-c0387385b1f7",
+      "name": "MX Record not found",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        2704,
+        1248
+      ],
+      "id": "4d7c2516-7964-4678-984e-c39eb757eb39",
+      "name": "Google Gemini with shared API",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "rY8Q8fD692woVgax",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://1.1.1.1/dns-query",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Get All Row(s) in sheet').item.json['Web Address (n8n)'] }}"
+            },
+            {
+              "name": "type",
+              "value": "15"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/dns-json"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        944,
+        864
+      ],
+      "id": "270fae43-4bd5-481c-9de9-07684b2136f7",
+      "name": "Check MX Records (via DoH)",
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o",
+          "mode": "list",
+          "cachedResultName": "Automation - 82 Million USA - Public Contacts PART 1 (15k leads) ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HYjWiFgjkGbzjSA84hWlMkqs2mTz9eAS6ZxZuwTYQ5o/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        944,
+        1184
+      ],
+      "id": "67c02b7d-c5c2-48d0-9c8a-fdce5745bedc",
+      "name": "Get All Row(s) in sheet1",
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vctypal2ZUcyd0d2",
+          "name": "Google Sheets account 5"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d892f1e5-d6a4-4dc3-9d96-112ee10e963e",
+              "leftValue": "={{ $json.Answer?.length > 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1392,
+        1184
+      ],
+      "id": "31e5a79e-db60-4ebc-93b4-03a38667f4cb",
+      "name": "Has MX Record?1",
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://1.1.1.1/dns-query",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $json['Web Address (n8n)'] }}"
+            },
+            {
+              "name": "type",
+              "value": "15"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/dns-json"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1168,
+        1184
+      ],
+      "id": "ad618fd1-2611-4fbc-afd8-e3a2977be44a",
+      "name": "Check MX Records (via DoH)1",
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 150
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        1888,
+        800
+      ],
+      "id": "1ac3b5fb-c4cf-43ee-9bf1-ea16f159dc8a",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "model": "qwen/qwen3-32b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        1248
+      ],
+      "id": "47702805-f7d6-4342-a0a7-6a3ba4450866",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "bjWFycrM7Dc5HIZK",
+          "name": "Groq account 3"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        3488,
+        1232
+      ],
+      "id": "10e33d3d-82ab-4da2-9fb0-5065889279c1",
+      "name": "Stop and Error"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        3392,
+        944
+      ],
+      "id": "2a30aaa3-952d-4a32-9084-6f2ab57d99b0",
+      "name": "Stop and Error1"
+    },
+    {
+      "parameters": {
+        "content": "Deleted modules from the main workflow. Ignore/delete these modules if you wish to.\n",
+        "height": 688,
+        "width": 816,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        848,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "2f4897e1-1b81-45ab-92ea-794a6cef36ba",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Main Workflow\n",
+        "height": 704,
+        "width": 1872,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1808,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "b0965a96-b671-4ba0-b89c-b6347b09ed0b",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Getting Website data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and Error1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Found?": {
+      "main": [
+        [
+          {
+            "node": "Website Found",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Website Not found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        []
+      ]
+    },
+    "Update row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain1": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "find lead in sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "find lead in sheets": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet4": {
+      "main": [
+        []
+      ]
+    },
+    "Send a message2": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet5": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has MX Record?": {
+      "main": [
+        [
+          {
+            "node": "Has MX Record",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MX Record not found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Filtering the unsent emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtering the unsent emails": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Not found": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Found": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Getting Website data": {
+      "main": [
+        [
+          {
+            "node": "Website Found?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has MX Record": {
+      "main": [
+        []
+      ]
+    },
+    "MX Record not found": {
+      "main": [
+        []
+      ]
+    },
+    "Google Gemini with shared API": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Check MX Records (via DoH)": {
+      "main": [
+        [
+          {
+            "node": "Has MX Record?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Row(s) in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Check MX Records (via DoH)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check MX Records (via DoH)1": {
+      "main": [
+        [
+          {
+            "node": "Has MX Record?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get All Row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Karachi",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "5ytVWTiZ2MvkVAEh"
+  },
+  "versionId": "278431ef-ef96-427a-8ef5-97361e2e7b80",
+  "meta": {
+    "templateId": "5832",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4787e16baf9d41dae264233e4b91254cc39d23061268e8df03160fcf94a05f72"
+  },
+  "id": "5ytVWTiZ2MvkVAEh",
+  "tags": []
+}
