@@ -50,7 +50,7 @@ It reads leads from Google Sheets, generates AI-crafted cold emails, sends them 
 ## Prerequisites
 
 Before running the workflow, ensure you have:
-- **n8n** installed (v1.75.0 or newer)
+- **n8n** installed (v1.75.0 or newer) or Self Hosted on a VPS 
 - **Google Sheets API** credentials (OAuth2)
 - **Gmail API** credentials (OAuth2)
 - **Gemini AI access** integrated via LangChain
