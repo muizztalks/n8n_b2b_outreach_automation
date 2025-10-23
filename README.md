@@ -82,7 +82,7 @@ Before running the workflow, ensure you have:
 |--------|----------|
 | First Name | Personalization |
 | Company Name | Used in AI prompt |
-| Email (n8n) | Recipient email |
+| FINAL EMAIL | Recipient email |
 | Web Address | For context generation |
 | Email Status | SENT / FAILED |
 | Subject Line Sent | Stores AI-generated subject |
